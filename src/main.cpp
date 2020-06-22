@@ -8,11 +8,17 @@ int main()
     cout<<"veh 3.0"<<endl;
 
     //get image
+    //veh images number
+    string veh_images_number = "images_src_01";
+    //source path
+    string source_path = "data/" + veh_images_number;
     //work path
-    string work_path = "../../data/images_src_01";
+    CreateDirIfNotExists("work");
+    string work_path = "work/" + veh_images_number;
+    CreateDirIfNotExists(work_path);
     //left image dir
-    string left_image_path =  work_path + "/left_src_images";
-    string right_image_path = work_path + "/right_src_images";
+    string left_image_path =  source_path + "/left_src_images";
+    string right_image_path = source_path + "/right_src_images";
 
 /*图片转点云*/
     //左边图像生成点云
@@ -69,7 +75,6 @@ int main()
     optionPointCloud.RunLocateWheel();
     //测量轴距，栏板高度
     optionPointCloud.RunMeasureWheelbase();
-
 
 
 /*点云处理并测量*/
