@@ -9,18 +9,10 @@
 ├── COPYRIGHT
 ├── data
 │   ├── images_src_01						#第一辆车
-│   │   ├── left_colmap						#colmap输出文件夹
-│   │   ├── left_mask_images				#分割后的图片文件夹,也是colmap工作文件夹
-│   │   │   └── images						#图片都放入images中,按colmap格式
-│   │   ├── left_mvs						#经过mvs后输出点云数据
 │   │   ├── left_src_images					#左相机源图像
 │   │   │   ├── left_src_01.JPG
 │   │   │   ├── left_src_02.JPG
 │   │   │   └── left_src_03.JPG
-│   │   ├── right_colmap
-│   │   ├── right_mask_images
-│   │   │   └── images
-│   │   ├── right_mvs
 │   │   └── right_src_images				#右相机源图像
 │   │       ├── right_src_01.JPG
 │   │       ├── right_src_02.JPG
@@ -29,7 +21,8 @@
 │       ├── left_src_images
 │       └── righte_src_images
 ├── docs
-│   └── README.md
+│   ├── 流程图.odg
+│   └── 流程图.png
 ├── include
 │   ├── file.h
 │   ├── optionimage.h
@@ -44,8 +37,18 @@
 │   ├── optionimage.cpp						#图片转点云
 │   ├── optionpointcloud.cpp				#点云处理及测量
 └── test
-    ├── CMakeLists.txt
-    └── test1.cpp
+│   ├── CMakeLists.txt
+│   └── test1.cpp
+└── work									#工作文件夹
+    └── images_src_01						#第一辆车
+        ├── left_colmap						#left colmap输出文件夹
+        ├── left_mask_images				#分割后的left 图片文件夹,也是colmap工作文件夹
+        │   └── images						#图片都放入images中,按colmap格式
+        ├── left_mvs						#经过mvs后输出点云数据
+        ├── right_colmap
+        ├── right_mask_images
+        │   └── images
+        └── right_mvs
 ```
 
 ## 结构

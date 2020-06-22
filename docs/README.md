@@ -1,1 +1,0 @@
-# sample project based on cmake build system
