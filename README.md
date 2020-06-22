@@ -51,9 +51,19 @@
         └── right_mvs
 ```
 
-## 结构
+## 框架结构
 
 <img src="docs/流程图.png" style="zoom: 67%;" />
+
+## 依赖库
+sudo apt-get install \
+    libboost-program-options-dev \
+    libboost-filesystem-dev \
+    libboost-graph-dev \
+    libboost-regex-dev \
+    libboost-system-dev \
+    libboost-test-dev \
+opencv 3.4.6
 
 ### 图像生成点云部分
 1. 暂时结构顺序访问，左相机跑完后，跑右边相机
