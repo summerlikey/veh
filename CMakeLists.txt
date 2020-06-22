@@ -21,6 +21,9 @@ find_package(Boost REQUIRED COMPONENTS
         regex
         system
         unit_test_framework)
+# PCL
+find_package(PCL REQUIRED)
+
 
 set(THIRD_PARTY_LIBS
         ${OpenCV_LIBS}
@@ -28,11 +31,13 @@ set(THIRD_PARTY_LIBS
         ${Boost_PROGRAM_OPTIONS_LIBRARY}
         ${Boost_REGEX_LIBRARY}
         ${Boost_SYSTEM_LIBRARY}
+        ${PCL_LIBRARIES}
 )
 
 set(THIRD_INCLUDE_DIRS
         ${OpenCV_INCLUDE_DIRS}
         ${Boost_INCLUDE_DIRS}
+        ${PCL_INCLUDE_DIRS}
 )
 
 
