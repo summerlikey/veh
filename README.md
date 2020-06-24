@@ -65,6 +65,8 @@ sudo apt-get install \
     libboost-test-dev \
 opencv 3.4.6
 
+python3.6
+
 ### 图像生成点云部分
 1. 暂时结构顺序访问，左相机跑完后，跑右边相机
 2. 暂时文件夹传递数据,如需数据存在内存，根据具体结构，将其存储位OptionImage数据成员
