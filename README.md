@@ -7,7 +7,7 @@
 ├── build
 ├── CMakeLists.txt
 ├── COPYRIGHT
-├── data
+├── data                                    #源文件夹
 │   ├── images_src_01						#第一辆车
 │   │   ├── left_src_images					#左相机源图像
 │   │   │   ├── left_src_01.JPG

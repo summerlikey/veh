@@ -23,6 +23,9 @@ find_package(Boost REQUIRED COMPONENTS
         unit_test_framework)
 # PCL
 find_package(PCL REQUIRED)
+#指定python库路径
+file(GLOB_RECURSE Python3.6_LIB "/usr/lib/python3.6/config-3.6m-x86_64-linux-gnu/*.so")
+
 
 
 set(THIRD_PARTY_LIBS
@@ -32,22 +35,24 @@ set(THIRD_PARTY_LIBS
         ${Boost_REGEX_LIBRARY}
         ${Boost_SYSTEM_LIBRARY}
         ${PCL_LIBRARIES}
+        ${Python3.6_LIB}
 )
 
 set(THIRD_INCLUDE_DIRS
         ${OpenCV_INCLUDE_DIRS}
         ${Boost_INCLUDE_DIRS}
         ${PCL_INCLUDE_DIRS}
+        "/usr/include/python3.6"
 )
-
-
-set(INTERNAL_INCLUDE
-        ${PROJECT_SOURCE_DIR}/include)
 
 set(INTERNAL_LIB
 
 )
 
+set(INTERNAL_INCLUDE
+        ${PROJECT_SOURCE_DIR}/include)
+
+        
 enable_testing()
 
 ############### source and test ######################

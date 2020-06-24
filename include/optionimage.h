@@ -4,6 +4,7 @@
 #include<iostream>
 #include<vector>
 #include"opencv2/opencv.hpp"
+#include"Python.h"
 class OptionImage
 {
 public:
@@ -16,6 +17,8 @@ public:
     int RunColmap(std::string colmap_work_path,std::string colmap_out_path);
     //调用mvs入口
     int RunMVS(std::string mvs_work_path,std::string mvs_out_path);
+    //use python
+    int RunPythonMVSModule(const char * c_str);
 private:
     //path
     std::string pattern_jpg_;
